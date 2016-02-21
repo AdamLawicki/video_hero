@@ -1,0 +1,42 @@
+/*This is needed to make the video play correctly in the background!*/
+.hero {
+    border-right: none;
+    border-left: none;
+    position: relative;
+}
+.no-video .video-module video,
+.touch .video-module video {
+    display: none;
+}
+.no-video .video-module .vid,
+.touch .video-module .vid {
+    display: block !important;
+}
+.video-module {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+.video-module .vid img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.video-module .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.video-module video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+}
+.video-module video.fillWidth {
+    width: 100%;
+}
